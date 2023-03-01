@@ -15,3 +15,12 @@ EXPLAIN select count(*)from moja_tabela;
 
 --sprawdzenie rozszenien
 select * from pg_extension
+
+--tworzenie tabeli z kluczem autoinkrementacyjnym
+create table zamowienia (
+	id integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+	id_osoby bigint
+)
+
+--kasowanie tabeli
+drop table zamowienia
