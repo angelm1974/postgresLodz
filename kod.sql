@@ -29,3 +29,12 @@ drop table zamowienia
 --formula pobierania usera
 select u.id_user, u.user_name, r.role_name from public.user u, public.user_has_role ur , public.role r
 where ur.id_user= u.id_user and ur.id_role=r.id_role
+
+
+-- z uprawnieniami
+select u.id_user, u.user_name, r.role_name, p.permission_name
+from public.user u, public.user_has_role ur , public.role r,
+	public.role_has_permission rp, public.permission p
+where 
+ur.id_user= u.id_user and ur.id_role=r.id_role and
+r.id_role=rp.id_role and rp.id_permission=p.id_permission
