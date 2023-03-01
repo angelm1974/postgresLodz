@@ -9,3 +9,6 @@ SELECT sum(pg_database_size(datname))from pg_database
 
 -- zliczanie ilosci rekordów  wmojej tabeli
 select count(*)from moja_tabela;
+
+-- sprawdzanie czasu wykonania kwerendy
+EXPLAIN select count(*)from moja_tabela; 
