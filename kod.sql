@@ -6,3 +6,6 @@ SELECT pg_database_size(current_database())
 
 -- ile zajmują miejsca wszystkie bazy danych
 SELECT sum(pg_database_size(datname))from pg_database
+
+-- zliczanie ilosci rekordów  wmojej tabeli
+select count(*)from moja_tabela;
