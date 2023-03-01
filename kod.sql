@@ -12,3 +12,6 @@ select count(*)from moja_tabela;
 
 -- sprawdzanie czasu wykonania kwerendy
 EXPLAIN select count(*)from moja_tabela; 
+
+--sprawdzenie rozszenien
+select * from pg_extension
