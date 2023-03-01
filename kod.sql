@@ -24,3 +24,8 @@ create table zamowienia (
 
 --kasowanie tabeli
 drop table zamowienia
+
+
+--formula pobierania usera
+select u.id_user, u.user_name, r.role_name from public.user u, public.user_has_role ur , public.role r
+where ur.id_user= u.id_user and ur.id_role=r.id_role
