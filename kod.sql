@@ -64,4 +64,8 @@ inner join public.ciasto ci
 On cu.id_cukierni= ci.id_cukierni
 Group by cu.nazwa
 
+--wiersz zapisany do jsona
+SELECT row_to_json(l) FROM public.logi l
+where id=2
+ORDER BY id ASC 
 
